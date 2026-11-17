@@ -28,33 +28,22 @@ public class HibernateDemoApplication {
   }
 
   /**
-   * Executes database commands upon application startup.
-   *
-   * @param studentDao data access object for Student entity operations
-   * @return a CommandLineRunner instance to run on startup
-   */
-  // @Bean
-  // CommandLineRunner commandLineRunner(StudentDao studentDao) {
-  //     return runner -> {
-  //         // createStudent(studentDao);
-  //         // readStudent(studentDao);
-  //         // queryStudents(studentDao);
-  //         // queryStudentLastName(studentDao);
-  //         // updateStudent(studentDao);
-  //         // deleteStudent(studentDao);
-  //         // deleteAllStudent(studentDao);
-  //     };
-  // }
-
-  /**
    * Executes application database operations on startup using AppDao.
    *
    * @param app data access object for application entity operations
+   * @param studentDao data access object for Student entity operations
    * @return a CommandLineRunner instance to run on startup
    */
   @Bean
-  CommandLineRunner commandLineRunner(AppDao app) {
+  CommandLineRunner commandLineRunner(AppDao app, StudentDao studentDao) {
     return runner -> {
+      // createStudent(studentDao);
+      // readStudent(studentDao);
+      // queryStudents(studentDao);
+      // queryStudentLastName(studentDao);
+      // updateStudent(studentDao);
+      // deleteStudent(studentDao);
+      // deleteAllStudent(studentDao);
       // createInstructor(app);
       // findInstructor(app);
       // deleteInstructor(app);
